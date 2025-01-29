@@ -4,10 +4,37 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
+	<style>
+	.holder {
+    display: flex;
+    justify-content: space-between; /* Ensures first and last items touch the edges */
+    flex-wrap: wrap; /* Moves items to the next row instead of squashing */
+    gap: 10px; /* Optional: Provides spacing between items */
+    padding: 10px; /* Prevents items from sticking to the viewport edges */
+}
+
+.item {
+    min-width: 150px; /* Prevents items from becoming too small */
+    flex: 1; /* Allows items to grow evenly */
+    max-width: calc(33% - 10px); /* Limits width to avoid squashing */
+    text-align: center;
+    padding: 15px;
+    background-color: lightgray;
+    border: 1px solid #ccc;
+}
+		</style>
 </head>
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div class="holder">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+</div>
     <script type="text/javascript" src="./script.js">
 </script>
 
